@@ -1,0 +1,16 @@
+http{
+server{
+listen 8888;
+root /usr/share/nginx/html;
+location /veg {
+root /usr/share/nginx;
+location /yup {
+root /usr/share/nginx;
+try_files /yup/ok.html /index.html=404;
+}
+}
+}
+}
+events{
+}
+
