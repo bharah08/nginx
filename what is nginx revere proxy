@@ -1,0 +1,16 @@
+NGINX is a reverse proxy:--
+
+A reverse proxy is a server that sits in front of a group of web servers. When a browser makes an HTTP request, the request first goes to the reverse proxy, which then sends the request to the appropriate web server.
+
+Some benefits of a reverse proxy:
+
+Security: with a reverse proxy, the web server never reveals its IP address to the client, which makes the server more secure.
+
+SSL Encryption (more security): encrypting and decrypting SSL communications is expensive, and would make web servers slow. The reverse proxy can be configured to decrypt incoming requests from the client and encrypt outgoing responses from the server.
+
+Load Balancing: if a website is very popular, it’s unlikely that all the traffic is handled by a single web server. Usually, the website will be distributed across many web servers, with a reverse proxy in front of them. (see below for more on load balancing)
+
+NGINX is a HTTP load balancer
+A load balancer is responsible for routing client HTTP requests to web servers in an efficient manner. This prevents any individual web server from being overworked.
+
+A load balancer can also be configured so that if a web server goes down, the reverse proxy will no longer forward requests to that web server
